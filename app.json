@@ -1,0 +1,52 @@
+{
+  "name": "LucidMusic Bot",
+  "description": "Open Source bot to stream media trough Telegram Voice Chat. Powered by PyTgCalls and Pyrogram",
+  "keywords": ["solidmusic", "musicbot", "video-stream", "videochat", "voicechat", "telegram"],
+  "repository": "https://github.com/HairyPotah02/LucidMusic",
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Fill it with your API_ID, get it from my.telegram.org/apps",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Fill it with your API_HASH, get it from my.telegram.org/apps",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Fill it with your Bot token, get it from @BotFather",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Fill it with your telegram id, not api id",
+      "required": true
+    },
+    "SESSION": {
+      "description": "Fill it with your assistant session string",
+      "required": true
+    },
+    "SUPPORT": {
+      "description": "your group support link, can use private or public group, example https://t.me/LucidSupportGroup",
+      "required": false,
+      "value": "https://t.me/LucidSupportGroup"
+    },
+    "CHANNEL": {
+      "description": "your channel support link, can use private or public channel, example https://t.me/LucidSupportGroup",
+      "required": false,
+      "value": "https://t.me/LucidSupportChannel"
+    },
+    "UPSTREAM_REPO": {
+      "description": "fill it if you fork from original repo",
+      "required": false,
+      "value": "https://github.com/HairyPotah02/LucidMusic"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
